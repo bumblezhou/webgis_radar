@@ -39,5 +39,15 @@ pyinstaller --onefile pycwr_tool.py --console --add-data "C:/Users/hp/AppData/Lo
 pip install -r requirements.txt
 ```
 
-## 下载编译好的gdal C++库
-    1. https://www.gisinternals.com/release.php
+## 下载并配置编译好的gdal C++库
+    1. 下载地址
+        https://www.gisinternals.com/release.php
+    2. 解压release-1928-x64-gdal-3-9-1-mapserver-8-2-0.zip到任意目录，比如d:/
+    3. 设置环境变量 GDAL_DATA 为 d:/release-1928-x64-gdal-3-9-1-mapserver-8-2-0/bin/gdal-data。
+        这样在gdal进行计算时，就可以找到它所需要的数据文件。
+    4. 设置环境变量 PROJ_LIB 为 d:/release-1928-x64-gdal-3-9-1-mapserver-8-2-0/bin/proj9/share.
+        这样在gdal进行计算时，就可以找到它所需要的数据文件。
+    5. 把 d:/release-1928-x64-gdal-3-9-1-mapserver-8-2-0/bin/ 添加到环境变量 PATH 中去。
+        这样java代码在调用gdal功能时，就可以找到它所需要的dll文件。
+    6. 把 d:/release-1928-x64-gdal-3-9-1-mapserver-8-2-0/bin/gdal/apps/ 添加到环境变量 PATH 中去。
+        这样java代码在调用gdal功能时，就可以找到java代码所需要执行的.exe文件。
