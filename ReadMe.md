@@ -28,3 +28,6 @@ pyinstaller --onefile pycwr_tool.py --console --add-data "C:/Users/hp/AppData/Lo
         WorkLoad -> Desktop development with C++
     4. 安装gdal python库。
         pip install gdal=3.9.1
+
+## 下载编译好的gdal C++库
+    1. https://www.gisinternals.com/release.php
