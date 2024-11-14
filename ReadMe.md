@@ -11,6 +11,11 @@ gdalinfo -mdd COG C:/Users/hp/Desktop/雷达解析/sample_cog_02.tif
 ## 使用COG格式封装tif文件
 gdalwarp C:\Users\hp\Desktop\雷达解析\sample_cog_01.tif C:\Users\hp\Desktop\雷达解析\sample_cog_wrapped_01.tif -of COG
 
+## 安装pyinstaller
+```bash
+pip install pyinstaller
+```
+
 ## 生成pycwr_tool可执行文件
 pyinstaller --onefile pycwr_tool.py --console --add-data "C:/Users/hp/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0/LocalCache/local-packages/Python310/site-packages/pycwr/data/;pycwr/data" --add-data "C:/Users/hp/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0/LocalCache/local-packages/Python310/site-packages/pycwr/configure/;pycwr/configure" --add-data "C:/Users/hp/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0/LocalCache/local-packages/Python310/site-packages/pycwr/draw/;pycwr/draw"
 
@@ -28,6 +33,11 @@ pyinstaller --onefile pycwr_tool.py --console --add-data "C:/Users/hp/AppData/Lo
         WorkLoad -> Desktop development with C++
     4. 安装gdal python库。
         pip install gdal=3.9.1
+
+## 安装其他python依赖库
+```bash
+pip install -r requirements.txt
+```
 
 ## 下载编译好的gdal C++库
     1. https://www.gisinternals.com/release.php
